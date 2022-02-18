@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     const borderStyle = OutlineInputBorder(
         borderRadius: BorderRadius.all(Radius.circular(36)),
         borderSide: BorderSide(
-        color: Color(Colors.black12), width: 5));
+        color: Colors.black12, width: 1));
 
     return MaterialApp(
       home: Scaffold(
@@ -55,18 +55,22 @@ class MyApp extends StatelessWidget {
             ElevatedButton(onPressed: () {},
             child: Text ('Войти'),
             style: ElevatedButton.styleFrom(
-              primary: Color(Colors.black12),
+              primary: Colors.blueAccent,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(36,0),
+                borderRadius: BorderRadius.circular(36.0),
                ),
               ) ,
              ),
             ),
             SizedBox(height: 32,),
-            InkWell(child: const Text('Регистрация', style: linkTextStyle,),
-                onTap: () {}),
-            SizedBox(height: 20,),
-            InkWell(child: Text('Забыли пароль'),onTap: (){}),
+            InkWell(child: const Text('Регистрация',
+              style: TextStyle(
+                fontSize: 16,
+                color: Color.fromRGBO(0, 0, 0, 6)
+              ),
+            ), onTap: () {}),
+              SizedBox(height: 20,),
+            InkWell(child: Text('Забыли пароль?'),onTap: (){}),
           ],),
         )
       ),
